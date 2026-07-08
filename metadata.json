@@ -1,0 +1,6 @@
+{
+  "name": "Pak Earning Portal",
+  "description": "A premium earning portal featuring glassmorphic designs, secure account activation flows, direct referral commission, and task verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

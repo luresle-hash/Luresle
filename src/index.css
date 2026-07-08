@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* Import Noto Nastaliq Urdu as a high-quality fallback font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* Load Jameel Noori Nastaleeq from reliable jsDelivr CDN */
+@font-face {
+  font-family: 'Jameel Noori Nastaleeq';
+  src: url('https://cdn.jsdelivr.net/gh/naeemshafi/urdu-fonts/Jameel-Noori-Nastaleeq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Jameel Noori Nastaleeq", "Noto Nastaliq Urdu", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom global styles for the premium dark grey layout */
+body {
+  font-family: var(--font-sans);
+  background-color: #121214;
+  color: #f3f4f6;
+  direction: rtl; /* Right to Left */
+  text-align: right;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(30, 30, 35, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Soft Glow Effects */
+.glow-yellow {
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.25);
+  border-color: rgba(234, 179, 8, 0.4);
+}
+.glow-green {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.25);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.glow-white {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Selected Plan Glow */
+.plan-selected-glow {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15), inset 0 0 12px rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: scale(1.02);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121214;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Urdu typography helper to adjust spacing and height */
+h1, h2, h3, h4, p, span, button, input {
+  line-height: 1.8 !important;
+}
